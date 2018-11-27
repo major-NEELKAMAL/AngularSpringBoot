@@ -1,0 +1,23 @@
+<p>
+  search-customer works!
+</p>
+
+ 
+   Address
+      <input #searchBox (input)="searchAddress(searchBox.value)" />
+    <br><br>
+   
+
+
+<table border="1" *ngIf="searchBox.value != '' ">
+<thead>
+  <th>name</th><th>address</th><th>email</th>
+</thead>
+<tbody>
+  <tr *ngFor="let customer of customers$ | async">
+    <td>{{customer.name}}</td>
+    <td>{{customer.address}}</td>
+    <td>{{customer.email}}</td>
+  </tr>
+</tbody>
+</table>

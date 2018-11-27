@@ -1,0 +1,15 @@
+<p>
+  create-customer works!
+</p>
+<form  (ngSubmit) ="onSubmit()">
+    <label >Name
+        <input [(ngModel)]="customer.name" name="name" >
+    </label><br><br>
+    <label >Address
+      <input [(ngModel)]="customer.address" name="address">
+    </label><br><br>
+    <label >Email
+      <input [(ngModel)]="customer.email" name="email">
+    </label><br><br>
+    <button type="submit" class="btn btn-success">Submit</button>
+</form>
